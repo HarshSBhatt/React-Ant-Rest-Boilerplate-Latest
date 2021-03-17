@@ -1,14 +1,34 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from "react-dom";
+import { ApolloProvider } from "@apollo/react-hooks";
+// import * as Sentry from "@sentry/react";
+
+//! User Files
+
+import { AppContextProvider } from "./AppContext";
+import client from "./apollo";
+import Routes from "./Routes";
+import reportWebVitals from "./reportWebVitals";
+
+//! Styles
+
+import "./index.css";
+import "./styles/main.less";
+
+// if (process.env.NODE_ENV !== "development") {
+//   Sentry.init({
+//     dsn: process.env.REACT_APP_SENTRY_DSN,
+//     tracesSampleRate: 1.0,
+//     environment: process.env.NODE_ENV,
+//   });
+// }
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <ApolloProvider client={client}>
+    <AppContextProvider>
+      <Routes />
+    </AppContextProvider>
+  </ApolloProvider>,
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
