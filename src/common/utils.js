@@ -3,8 +3,8 @@ import moment from "moment";
 
 //! Ant Imports
 
-import notification from "antd/lib/notification";
 import message from "antd/lib/message";
+import notification from "antd/lib/notification";
 
 //! User Files
 

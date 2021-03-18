@@ -4,11 +4,15 @@ export const ROUTES = {
   LOGIN: "/login",
   LOGOUT: "/logout",
   USERS_MANAGEMENT: "/users",
+  UPLOAD_VIDEO: "/upload-video",
+  VIDEOS: "/videos",
 };
 
 /*  Modules */
 export const MODULES = {
   USERS_MANAGEMENT: "User Management",
+  UPLOAD_VIDEO: "Upload Video",
+  VIDEOS: "Videos",
 };
 
 /* Authentication */

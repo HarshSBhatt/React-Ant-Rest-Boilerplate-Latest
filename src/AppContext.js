@@ -69,7 +69,8 @@ function AppContextProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const getToken = () => {
-    return localStorage.getItem(TOKEN) || null;
+    // TODO: Replace "Demo" with null after integration of auth functionality
+    return localStorage.getItem(TOKEN) || "Demo";
   };
 
   // eslint-disable-next-line
