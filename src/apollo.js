@@ -1,13 +1,17 @@
 import * as Sentry from "@sentry/browser";
-import { InMemoryCache } from "apollo-cache-inmemory";
-import { ApolloClient } from "apollo-client";
-import { ApolloLink, from } from "apollo-link";
-import { setContext } from "apollo-link-context";
 import { ErrorLink } from "apollo-link-error";
-import { createHttpLink } from "apollo-link-http";
 import { createBrowserHistory } from "history";
-import { get, isObject } from "lodash";
-// import { split } from "@apollo/client";
+import get from "lodash/get";
+import isObject from "lodash/isObject";
+import {
+  // split,
+  InMemoryCache,
+  ApolloClient,
+  ApolloLink,
+  from,
+  createHttpLink,
+} from "@apollo/client";
+import { setContext } from "apollo-link-context";
 // import { getMainDefinition } from "@apollo/client/utilities";
 // import { WebSocketLink } from "@apollo/client/link/ws";
 
