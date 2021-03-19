@@ -1,12 +1,12 @@
 import ReactDOM from "react-dom";
-import { ApolloProvider } from "@apollo/react-hooks";
+import { ApolloProvider } from "@apollo/client/react/context/ApolloProvider";
 // import * as Sentry from "@sentry/react";
 
 //! User Files
 
-import { AppContextProvider } from "./AppContext";
 import client from "./apollo";
 import Routes from "./Routes";
+import { AppContextProvider } from "./AppContext";
 import reportWebVitals from "./reportWebVitals";
 
 //! Styles
