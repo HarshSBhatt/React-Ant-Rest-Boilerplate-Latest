@@ -3,7 +3,6 @@ import { createContext, useReducer } from "react";
 //! User Files
 
 import * as ActionTypes from "common/actionTypes";
-import client from "apollo";
 import api from "common/api";
 import { TOKEN, USER, USER_ID } from "common/constants";
 
@@ -48,7 +47,6 @@ const reducer = (state, action) => {
     case ActionTypes.LOGOUT:
       delete api.defaults.headers.common.Authorization;
       localStorage.clear();
-      client.clearStore();
       return {
         ...initialState,
         authenticated: false,
